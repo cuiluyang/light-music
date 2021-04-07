@@ -1,0 +1,55 @@
+<!--miniprogram/pages/play/play.wxml-->
+<view class="content">
+  <image class="backgroundimg" src="{{song.album.picUrl}}"></image>
+  <view class="title">
+    {{song.name}}
+  </view>
+  <!--中间歌词-->
+  <view class="middle">
+    <swiper class="middle-wrapper" circular="true">
+      <!--封面-->
+      <swiper-item class="song-wrapper">
+       <view class="song-image">
+        <image style="animation-play-state:{{state=='play'?'runing':'paused'}}" src="{{song.album.picUrl}}"></image>
+       </view>
+      </swiper-item>
+      <!--歌词-->
+      <swiper-item>
+        <!--歌词滚动scroll-view组件-->
+        <scroll-view class="song-word" scroll-y="true" scroll-top="{{margintop}}">
+        <view class="contentArray">
+        <block wx:for="{{lyricArrays}}" wx:for-item="lyric" wx:for-index="index">
+          <text class="{{lyricindex == index?'currentLyric':''}}">
+          {{lyric[1]}}
+          </text>
+        </block>
+        </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="comment">
+    <view>
+      <image bindtap="onLikeTap" src="{{like=='1'?yes:no}}"></image>
+    </view>
+    <view>
+      <image src="../../image/评论.png" catchtap="gotoComment"></image>
+    </view>
+  </view>
+  <view class="progress-bar">
+    <view class="playTime">
+    {{playTime}}
+    </view>
+    <slider backgroundColor="#c3d7df" activeColor="#126BAE" block-size="10" value="{{playTimeValue}}" max="{{playTimeMax}}" bindchange="changProgress"></slider>
+    <view class="allTime">
+    {{allTime}}
+    </view>
+  </view>
+  <view class="control">
+    <image src="../../image/上一.png" catchtap="lastSong"></image>
+    <image bindtap="onPlayTap" src="{{state=='play'?paused:playing}}"></image>
+    <image src="../../image/下一.png" bindtap="nextSong"></image>
+  </view>
+</view>
+
+<!-- <audio action="{{action}}" bindtimeupdate="changeTime" src="https://music.163.com/song/media/outer/url?id={{id}}.mp3"></audio> -->

@@ -1,0 +1,17 @@
+<!--miniprogram/pages/ilike/ilike.wxml-->
+ <view class="musicContaner" wx:for="{{ilikeList}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+    <view class="left">
+    <image src="{{item[1]}}"> </image>
+    </view>
+    <view class="center">
+      <view class="songName">
+        {{item[2]}}
+      </view>
+      <view class="singerName">
+        {{item[3]}}-《{{item[4]}}》
+      </view>
+    </view>
+    <view class="right">
+      <image bindtap="playTap" src="../../image/play.png" data-id="{{item[0]}}"></image>
+    </view>
+  </view>

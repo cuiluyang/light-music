@@ -1,0 +1,13 @@
+<!--miniprogram/pages/my/my.wxml-->
+<view class="header">
+  <view>
+    <image src="../../image/头像.png"></image>
+  </view>
+  <view>雨夜</view>
+  
+</view>
+
+<view class="middle">
+  <view class="v1" bindtap="changeListTop" data-listid="0">播放列表</view>
+  <view class="v2" bindtap="changeListTop" data-listid="1">我喜欢</view>
+</view>

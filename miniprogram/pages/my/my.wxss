@@ -1,0 +1,82 @@
+/* miniprogram/pages/my/my.wxss */
+.header{
+  width: 100%;
+  height: 300rpx;
+  background-color: rgb(86, 152, 195);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header image{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 75rpx 75rpx 0rpx 75rpx;
+  border-radius: 50%;
+}
+
+.middle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 40rpx;
+  
+}
+.middle .v1{
+  background-color: rgb(122, 115, 116);
+  width: 300rpx;
+  height: 300rpx;
+  line-height: 300rpx;
+}
+.middle .v2{
+  background-color: rgb(237, 85, 106);
+  width: 300rpx;
+  height: 300rpx;
+  line-height: 300rpx;
+}
+
+
+.musicContaner{
+  width: 100%;
+  height: 150rpx;
+  margin-top: 0rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.left{
+  width: 20%;
+  height: 100%;
+}
+.left image{
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+  border-radius: 10%;
+}
+.center{
+  width: 60%;
+}
+.songName{
+  color: black;
+  font-size: 30rpx;
+  padding-left: 24rpx;
+  margin-top: 20rpx;
+}
+.singerName{
+  color: black;
+  font-size: 25rpx;
+  padding-left: 24rpx;
+  margin-top: 25rpx;
+}
+.right{
+  width: 20%;
+  height: 100%;
+}
+.right image{
+  width: 40%;
+  height: 40%;
+  margin: 30%;
+}
+

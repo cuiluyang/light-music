@@ -1,0 +1,17 @@
+<!--miniprogram/pages/playlist/playlist.wxml-->
+ <view class="musicContaner" wx:for="{{listing}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+    <view class="left">
+    <image src="{{listing.length == 20?item.album.picUrl:listingimg[idx]}}"> </image>
+    </view>
+    <view class="center">
+      <view class="songName">
+        {{item.name}}
+      </view>
+      <view class="singerName">
+        {{item.artists[0].name}}-《{{item.album.name}}》
+      </view>
+    </view>
+    <view class="right">
+      <image bindtap="playTap" src="../../image/play.png" data-id="{{item.id}}"></image>
+    </view>
+  </view>

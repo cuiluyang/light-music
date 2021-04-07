@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<!--轮播图-->
+<swiper class="swiperContaner" 
+        indicator-dots="ture" 
+        indicator-active-color="yellow" 
+        autoplay="ture" 
+        circular="ture">
+  <block wx:for="{{imgUrls}}" 
+         wx:for-item="imgOne">
+    <swiper-item>
+      <image bindtap="playTap" data-id="{{imgOne.imgid}}" src="{{imgOne.img}}" class="slide-image" width="335" height="150"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="header" > 
+  <button class="v1" bindtap="changeListTop" data-listid="3778678">热歌榜</button>
+  <button class="v2" bindtap="changeListTop" data-listid="3779629">新歌榜</button>
+  <button class="v3" bindtap="changeListTop" data-listid="19723756">飙升榜</button>
+</view>
+
+ <view class="musicContaner" wx:for="{{songs}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+    <view class="left">
+    <image src="{{item.album.picUrl}}"> </image>
+    </view>
+    <view class="center">
+      <view class="songName">
+        {{item.name}}
+      </view>
+      <view class="singerName">
+        {{item.artists[0].name}}-《{{item.album.name}}》
+      </view>
+    </view>
+    <view class="right">
+      <image bindtap="playTap" src="../../image/play.png" data-id="{{item.id}}"></image>
+    </view>
+  </view>
+
+

@@ -1,0 +1,156 @@
+/* miniprogram/pages/comment/comment.wxss */
+page{
+  background-color: rgb(86, 152, 195);
+}
+.whole{
+  width: 90%;
+  height: 300rpx;
+  margin: auto;
+  margin-top: 26rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom:5rpx dashed teal;
+}
+.user{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.left{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.right{
+  width: 600rpx;
+  height: 100%;
+  margin-left: 20rpx;
+  margin-top: 50rpx;
+}
+.left image{
+  width: 90rpx;
+  height: 90rpx;
+  margin: 5rpx;
+}
+.user-name{
+  width: 200rpx;
+  font-size: 33rpx;
+  color: #126BAE;
+  margin-bottom: 20rpx;
+}
+.time{
+  margin-top: 20rpx;
+  width: 400rpx;
+  height: 30rpx;
+  font-size: 25rpx;
+  color: #D5D5D5;
+}
+
+.content{
+  width: 100%;
+  height: 200rpx;
+  font-size: 40rpx;
+  word-break: keep-all;
+  word-wrap: break-word;
+  text-align:justify;
+  color: #15231b;
+}
+
+
+
+.comment_input{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top:1rpx solid white;
+  min-height: 100rpx;
+  z-index: 1000;
+}
+.send-msg-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 10rpx 0;
+  margin-top: 9rpx;
+
+}
+
+.input-item{
+  margin: 0 5rpx;
+  flex: 1;
+  width: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.comment-icon{
+  position: absolute;
+  left: 5rpx;
+  top: 6rpx;
+}
+.input{
+  border: 1rpx solid #D5D5D5;
+  background-color: #fff;
+  border-radius: 3px;
+  line-height: 65rpx;
+  width: 550rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  color: #838383;
+  padding: 0 2%;
+}
+.keyboard_input{
+  width: auto;
+  max-height: 500rpx;
+  height: 65rpx;
+  word-break: break-all;
+  overflow: auto;
+
+}
+.keyboard-icon{
+  margin: 0 5rpx;
+  height: 65rpx;
+  width: 65rpx;
+  transform: scale(0.9);
+  margin-top: 2px;
+}
+.speak_input{
+  text-align: center;
+  color: #3a2b63;
+  height: 65rpx;
+}
+.recoding{
+  background-color: #ccc;
+}
+.speak-icon{
+  margin: 0 5rpx;
+  height: 65rpx;
+  width: 65rpx;
+  transform: scale(0.9);
+  margin-top: 2px;
+}
+.add-icon{
+  margin: 0 5rpx;
+  height: 65rpx;
+  width: 65rpx;
+  transform: scale(0.9);
+  margin-top: 2px;
+}
+.submit-btn{
+  font-size: 24rpx;
+  margin-top: 5rpx;
+  margin-right: 8rpx;
+  line-height: 60rpx;
+  width: 120rpx;
+  height: 60rpx;
+  background-color: #4A6141;
+  border-radius: 5rpx;
+  color: #fff;
+  text-align: center;
+  font-family: Microsoft Yahei;
+}

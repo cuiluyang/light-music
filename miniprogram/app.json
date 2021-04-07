@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/play/play",
+    "pages/search/search",
+    "pages/my/my",
+    "pages/comment/comment",
+    "pages/playlist/playlist",
+    "pages/ilike/ilike"
+  ],
+  "window": {
+    "backgroundColor": "#126BAE",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#126BAE",
+    "navigationBarTitleText": "轻音乐",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#132c33",
+    "selectedColor": "#126BAE",
+    "backgroundColor": "#126BAE",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/首页1.png",
+        "selectedIconPath": "image/首页.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "image/搜索1.png",
+        "selectedIconPath": "image/搜索0.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "image/我的0.png",
+        "selectedIconPath": "image/我的.png"
+      }
+    ]
+  }
+}

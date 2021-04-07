@@ -1,0 +1,30 @@
+<!--miniprogram/pages/search/search.wxml-->
+<form bindsubmit="formSubmit" >
+  <view class="search">
+    <view class="search_input">
+      <input name="input" ></input>
+    </view>
+    <view class="search_button">
+      <button type="primary" formType="submit">搜索</button>
+    </view>
+  </view>
+</form>
+
+ <view class="musicContaner" wx:for="{{songs}}" wx:for-item="item" wx:for-index="index" wx:key="key">
+    <view class="left">
+    <image wx:if="{{albumpicUrl[index]}}" src="{{albumpicUrl[index]}}"> </image>
+    </view>
+    <view class="center">
+      <view class="songName">
+        {{item.name}}
+      </view>
+      <view class="singerName">
+        {{item.artists[0].name}}-《{{item.album.name}}》
+      </view>
+    </view>
+    <view class="right">
+      <image bindtap="playTap" src="../../image/play.png" data-id="{{item.id}}"></image>
+    </view>
+  </view>
+
+

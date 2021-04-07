@@ -1,0 +1,23 @@
+<!--miniprogram/pages/comment/comment.wxml-->
+  <view class="whole" wx:for="{{comments}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+    <view class="left">
+      <image src="{{item.userimg}}"></image>
+    </view>
+    <view class="right">
+      <view class="content">
+        <view class="user-name">{{item.username}}:</view>
+        {{item.content}}
+        <view class="time">{{item.time}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="comment_input">
+    <view class="send-msg-box">
+      <view  class="input-item">
+        <input class="input keyboard-input" bindinput="bindCommentInput" bindconfirm="submitComment" value="{{keyboardIntputValue}}"></input>
+      </view>
+      <view class="submit-btn" catchtap="submitComment">发送</view>
+    </view>
+  </view>
+
